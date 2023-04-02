@@ -150,9 +150,7 @@ bool isBoxValid(int board[][SIZE], int boxStartRow, int boxStartCol, int num) {
 }
 
 bool isValid(int board[][SIZE], int row, int col, int num) {
-    return isRowValid(board, row, num) &&
-           isColValid(board, col, num) &&
-           isBoxValid(board, row - row%3, col - col%3, num);
+    return isRowValid(board, row, num) && isColValid(board, col, num) && isBoxValid(board, row - row%3, col - col%3, num);
 }
 
 bool findUnassignedLocation(int board[][SIZE], int& row, int& col) {
